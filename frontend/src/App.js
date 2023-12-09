@@ -33,7 +33,7 @@ function App() {
       setLoading(true);
       const formData = new FormData();
       formData.append('userInput', currentSearch);
-      const response = await axios.post('http://localhost:5000/search', formData);
+      const response = await axios.post('/search', formData);
   
       setRecommendedBooks(response.data.recommendedBooks);
 
@@ -55,7 +55,8 @@ function App() {
           <h3>The story has it that if the reader writes here about what they wish to read in a book, they will get a recommendation that best fits them!</h3>
           <h2>I wish to read a book about...</h2>
           <textarea name="searchForm" value={searchTerm} onChange={handleSearchChange} />
-          <button type="submit" onClick={handleSearchClick}>Recommend Me!</button>
+          <button type="submit" onClick={handleSearchClick}>Recommend Me!</button><br/>
+          <a style={{font: '1.5rem Garamond'}} href='https://github.com/spookypannkaka/TNM108_BookRecommender'>View this project on GitHub</a>
         </div>
 
         {/* Right page */}
