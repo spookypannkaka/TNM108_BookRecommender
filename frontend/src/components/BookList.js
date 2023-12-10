@@ -4,7 +4,7 @@ import BookCard from './BookCard';
 const BookList = ({ recommendedBooks  }) => {
   return (
     <div style={containerStyle}>
-      <h2>The best recommendations for you is...</h2>
+      <h2>The best recommendations for you are...</h2>
       {recommendedBooks && Object.values(recommendedBooks).map((book) => (
         <BookCard book={book} />
       ))}
