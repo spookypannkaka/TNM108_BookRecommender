@@ -33,7 +33,7 @@ function App() {
       setLoading(true);
       const formData = new FormData();
       formData.append('userInput', currentSearch);
-      const response = await axios.post('/search', formData);
+      const response = await axios.post('http://localhost:5000/search', formData);
   
       setRecommendedBooks(response.data.recommendedBooks);
 
